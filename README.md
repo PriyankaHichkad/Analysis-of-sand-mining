@@ -89,9 +89,9 @@ First, we need to identify sand mining locations. This is a joint effort with th
 
 ### Step-2:
 The sand mining detector is based on satellite images from the Sentinel-2 mission of the European Space Agency (ESA). Sentinel imagery is freely available.
-• **Temporal resolution:** Two satellites orbit Earth with revisit times of 10 days each. Jointly, they capture new images every 5 days over every location (except when it’s cloudy, then the images are useless).
-• **Spectral resolution:** While conventional images (e.g., taken by your smartphone) capture three color bands, red, green, and blue (RGB), Sentinel-2 images consist of 13 color bands. These include RGB and infrared, which is invisible to the human eye. For many earth observation applications, this multi- spectral resolution is valuable. For example, infrared reflectivity is used to assess the photosynthetic activity of forests. We also know that the infrared reflectivity of sand depends on grain size properties (e.g., roughness, shape, grain size). Hence, we hypothesize that the multi-spectral resolution will benefit sand mining detection.
- • **Spatial resolution:** One pixel covers 10x10 meters of Earth’s surface. (Depending on the color band, resolution varies between 10x10, 20x20 or 60x60 meters.)
+1. **Temporal resolution:** Two satellites orbit Earth with revisit times of 10 days each. Jointly, they capture new images every 5 days over every location (except when it’s cloudy, then the images are useless).
+2. **Spectral resolution:** While conventional images (e.g., taken by your smartphone) capture three color bands, red, green, and blue (RGB), Sentinel-2 images consist of 13 color bands. These include RGB and infrared, which is invisible to the human eye. For many earth observation applications, this multi- spectral resolution is valuable. For example, infrared reflectivity is used to assess the photosynthetic activity of forests. We also know that the infrared reflectivity of sand depends on grain size properties (e.g., roughness, shape, grain size). Hence, we hypothesize that the multi-spectral resolution will benefit sand mining detection.
+3. **Spatial resolution:** One pixel covers 10x10 meters of Earth’s surface. (Depending on the color band, resolution varies between 10x10, 20x20 or 60x60 meters.)
 
 ### Step-3:
 Next, we define our study areas. Some of the mining sites are small, covering a few hundred square kilometers. Other mining sites are huge, they follow a river for several dozens of kilometers. Accordingly, we define one or more non-overlapping rectangles around every mining location. These rectangles are arbitrary in size. They become our study area.
@@ -114,6 +114,7 @@ Recently, the government put the mine for auction for 2023-24 and then again for
 Below are the auction sites for the tenders:(Check the file-Exploratory Project)
 
 
+
 ## CHALLENGES
 ### Labelling Challenge:
 Unfortunately, the annotation process is highly ambiguous. Mining locations on riverbeds are exposed to nature, and river water removes signs of mining. Often it is ambiguous whether the remnant of a sand mine should be annotated. Or, it is unclear where to draw boundaries between a mining and a non-mining area. Even with high- resolution images from Google Earth available, expert human labelers disagree on annotations.
@@ -124,41 +125,56 @@ With sufficient financial resources, a research team could purchase commercial h
 It is very difficult to obtain correct data of the amount of material which is mined from the government. Thus the initial input datas required for trying out the Algorithm is difficult to get. While visiting the mine is an option but it is very time and labour- consuming, making it infeasible.
 
 
+
 ## CASE STUDIES
 ### Case Study-1:
 Mining lease in Khand No. 24/17, Chikassi, District Hamirpur.
 Complaint: Grievance in the present application is that illegal sand mining is being carried out by Sushil Tomar, resident of Chandpur, Kanpur Dehatat Khand Sankhya 24/17 in river Betwa at village Mohana, Thana, Dakore, Tehsil Orai, District Jalaun. The illegal mining is also obstructing the main stream of river. Big ditches have been thereby created and a child died by drowning in one of the ditches.
+
 [Link to the Complaint](https://indiankanoon.org/doc/68299123/)
+
 This is a timelapse I took from the coordinates of the mine- 24/17:(in the file-Exploratory Project)
 It clearly shows the extent of mining done in the river. This is called instream mining which is prohibited in India. It caused the river to change its course during the rainy season causing the nearby village – Mohana to have floods.
+
 The report below shows that the mine was then prohibited. Even the mine nearby was
 checked and then closed after seeing that two mines which are both instream and extensive have caused the river to change its course.
 This shows how important it is to maintain proper records of even the sanctioned mines.
 
 ### Case Study-2:
 **BETWA RIVER:** As per Directorate of Geology and Mining (M&G) Department, Uttar Pradesh, there are 238 Murram mining sites in 9 districts of the state of which 80 sites are in Hamirpur (52), Jalaun (28) districts where Murram mining is taking place on 4036 acres of river land since 2018-19 for a period of 5 years. The website mentions that of the 80 sites 56 are active and 24 closed. Similarly, there are 20 mining sites in Jhansi district of which 14 are mentioned as closed.
+
 Although the five year long mining lease period is coming to an end, information for these sites were last updated in 2018 (4 sites) 2019 (47 sites) 2021 (11 sites) and 2022 (only one site) while 16 sites are without any update. The other information including dispatched and approved quantity of minerals and selling price is mostly incomplete.
 Moreover, the District Survey Reports (DSR) as recommended by Ministry of Environment, Forest & Climate Change (MoEF&CC) and ordered by National Green Tribunal (NGT) for obtaining Environment Clearance (EC) before approving riverbed mining are not uploaded on the website.
+
 When on February 16, 2023, an inquiry was made regarding the riverbed mining DSRs for Jalaun and Hamirpur districts; Subash Singh, Mines Officer, Hamirpur replied that DSRs are available with Directorate General (DG) and not in public domain. Regarding mineral replenishment study in Betwa river; he claimed that it has been done by Central Mine Planning & Design Institute Limited (CMPDI) but they do not have the report. There is no such report uploaded on CMPDI.
 
 ### Case Study-3:
 **KEN RIVER:** The information on Directorate of Mining & Geology shows that there are 50 sand mine sites in Banda district of which 36 sites are closed. The complete list of 50 closed and active sand mine sites in Banda can be seen.
+
 Of total 14 active sites 8 are in Banda, 4 in Pailani tehsil and 1 each in Ataraa and Naraini tehsils. These 14 sites cumulatively cover 241.22 acres of riverbed land leased out to mine 5574 cubic metre of morrum for next 3 to 4 years. The website has not been updated since February 2022 and mentioned only 12 cubic meter as dispatched minerals so far from these 14 active mines.
 
 ### Case Study-4:
 **MEANDER AT CHATKAN VILLAGE:** Ken river forms a unique U shaped meander at Chatkan village about 10 km northwards from Banda district. The meander is comprised of an elevated sand island (of about 60 hectare) and sandy floodplain roughly covering over 2 square kilometre area.
 Another Google Earth imagery of March 2022 reveals more than 250 heavy trucks making bee line through the floodplain and over 45 giant poclain machines digging out riverbed in unsustainable and illegal manner.
+
 The mining department website mentions the location as Maruli khandar and shows 4 active sand mine leases there with a target to mine 1989 cubic metre of morrum from 91 acres of riverbed. The information on these sites has not been updated since February 2022 and just 3 cubic metre is mentioned as dispatched minerals.
 However, approximated measurement from satellite imagery reveals that over 240 acres of floodplain is directly affected by the mining operations and actual mining has taken over 130 acres of riverbed land which is about 39 acres more than permission granted.
 
 
+
 ## CONCLUSION
 This project highlights the immense potential of satellite-based monitoring for detecting illegal and extensive sand and morrum mining in riverbeds, particularly focusing on the identification of artificial bunds (embankments) that result from such activities. By leveraging high-resolution satellite imagery, we can monitor vast riverine landscapes and detect environmental degradation that would otherwise go unnoticed. The combination of advanced satellite technology, machine learning, and time-series analysis presents a powerful tool to combat the growing problem of unregulated mining, which is having devastating impacts on local ecosystems, water resources, and communities.
+
 The environmental consequences of illegal sand and morrum mining are severe and far-reaching. As demonstrated in the case studies and the analysis of mining activities along the Betwa River, extensive mining has led to changes in the course of rivers, exacerbated flooding, depleted groundwater levels, and caused widespread erosion. The formation of artificial bunds, often a direct result of excessive and illegal extraction, further alters river morphology, disrupting both aquatic habitats and local agriculture. The challenges this illegal mining poses are compounded by the lack of adequate government regulation, limited monitoring capabilities, and insufficient data on the true scale of mining operations. The slow pace of enforcement, with a significant gap between mining activities and government action, underscores the urgent need for more effective monitoring systems.
+
 The Sentinel-2 satellite imagery is an essential resource in this regard. Its high- resolution multispectral images provide detailed insights into riverbed changes and can be used to accurately track mining activities. This project has shown that using such imagery, coupled with AI-based detection methods, we can identify mining hotspots, track the formation of bunds, and monitor the extent of illegal mining activities over time. Time-series analysis makes it possible to detect the progression of mining activities. Moreover, the real-time detection capability of satellite-based monitoring can help authorities take timely action to prevent further damage, thereby improving regulatory compliance and supporting enforcement efforts.
+
 One of the most significant contributions of this project is its demonstration of how AI can be applied to satellite imagery for the automated detection of sand mining activities. Given the challenges of manual annotation, particularly in regions where mining leaves few visible traces or where natural processes quickly obscure signs of extraction, AI-based detection offers a scalable and cost-effective solution. The ability to integrate satellite data with other sources, such as ground reports or drones, furtherenhances the accuracy of detection and enables a more comprehensive monitoring approach.
+
 Despite the promising results, there are challenges that need to be addressed. The labeling process for training AI models is complex and ambiguous, as the signs of mining can be subtle, and interpreting satellite images requires expert knowledge. Additionally, the lack of access to ground-truth data on the amount of material extracted and the specifics of mining operations hinders the development of a robust detection framework. Obtaining accurate and timely data from government sources remains a significant challenge, and field visits, while valuable, are labor-intensive and costly.
+
 In conclusion, this project underscores the critical role of technology in addressing the issue of illegal sand and morrum mining. It not only provides a method for detecting and monitoring mining activities but also contributes to the broader goal of promoting sustainable resource management. The findings of this study call for stronger legal frameworks, better data management, and enhanced public awareness to ensure that river ecosystems and local communities are protected from the adverse impacts of illegal mining. As the demand for construction-grade sand continues to rise, it is imperative that innovative solutions like satellite-based monitoring and AI detection frameworks are integrated into policy and enforcement strategies. Only through such proactive measures can we hope to mitigate the environmental and socio-economic consequences of illegal mining and ensure the long-term sustainability of our river ecosystems.
+
 
 
 ## REFERENCES
